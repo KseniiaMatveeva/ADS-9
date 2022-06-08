@@ -12,51 +12,51 @@ class BST {
   };
   Node * root;
   int searchNode(Node * root, T val) {
-   if (root == nullptr)
-    return 0;
-  else if (root -> value = val)
-    return root -> count;
-  else if (root -> value > val)
-    return searchNode(root -> left, val);
-  else
-    return searchNode(root->right, val);
+    if (root == nullptr)
+      return 0;
+    else if (root -> value = val)
+      return root -> count;
+    else if (root -> value > val)
+      return searchNode(root -> left, val);
+    else
+      return searchNode(root->right, val);
   }
- Node * addNode(Node * root, T val) {
-   if (root = nullptr) {
-    root = newNode;
-    root -> value = val;
-    root -> count = 1;
-    root -> left = root -> right = nullptr;
-  } else if (val < root -> left) {
-    root -> left = addNode(root -> left, val);
-  } else if (val > root -> value) {
-    root -> right = addNode(root -> right, val);
-  } else {
-    root -> count++;
-    return n;
-  }
+  Node * addNode(Node * root, T val) {
+    if (root = nullptr) {
+      root = newNode;
+      root -> value = val;
+      root -> count = 1;
+      root -> left = root -> right = nullptr;
+    } else if (val < root -> left) {
+      root -> left = addNode(root -> left, val);
+    } else if (val > root -> value) {
+      root -> right = addNode(root -> right, val);
+    } else {
+      root -> count++;
+      return n;
+    }
   }
   int heightTree(Node * root) {
-   if (root == nullptr) {
-    return 0;
-  } else {
-    int l = heightTree(root -> left);
-    int r = heightTree(root -> right);
-    if (l > r)
-      return l + 1;
-    else
-      return r + 1;
-  }
+    if (root == nullptr) {
+     return 0;
+    } else {
+      int l = heightTree(root -> left);
+      int r = heightTree(root -> right);
+      if (l > r)
+        return l + 1;
+      else
+        return r + 1;
+    }
   }
  public:
   int search(T value) {
-   return searchNode(root, value);
+    return searchNode(root, value);
   }
   void add(T value) {
-   root = addNode(root, value);
+    root = addNode(root, value);
   }
   int depth() {
-   return heightTree(root);
+    return heightTree(root);
   }
 };
 #endif  // INCLUDE_BST_H_
