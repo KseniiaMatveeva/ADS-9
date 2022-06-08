@@ -9,7 +9,6 @@ BST<std::string> makeTree(const char* filename) {
   // поместите сюда свой код
   BST<std::string> newTree;
   std::string slova = "";
-  const char* filename = "war_peace.txt"
   std::ifstream file(filename);
   char raznic = 'a' - 'A';
   if (!file) {
@@ -28,7 +27,7 @@ BST<std::string> makeTree(const char* filename) {
         slova = "";
       }
     }
-    file.close();
     return newTree;
+    file.close();
   }
 }
