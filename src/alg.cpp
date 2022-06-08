@@ -19,6 +19,7 @@ BST<std::string> makeTree(const char* filename) {
     char sim = text.get();
     if (sim >= 'A' && sim <= 'Z') {
       sim = sim + raznic;
+      slova = slova + sim;
     } else if (('z' >= sim) && ('a' <= sim)) {
       slova = slova + sim;
     } else {
