@@ -11,19 +11,19 @@ class BST {
     Node * left, * right;
   };
   Node * root;
-  Node * addNode(Node * root, T& val);
-  int searchNode(Node * root, T& val);
+  Node * addNode(Node * root, T val);
+  int searchNode(Node * root, T val);
   int heightTree(Node * root);
  public:
-  void add(T& value);
-  int search(T& value);
+  void add(T value);
+  int search(T value);
   int depth();
 };
 
 template<typename T> 
 BST<T>::BST() {root == nullptr;}
 
-template BST<T>*BST<T>::addNode(Node * root, T& val) {
+template BST<T>*BST<T>::addNode(Node * root, T val) {
   if (root = nullptr){
     root = newNode;
     root -> value = val;
@@ -40,7 +40,7 @@ template BST<T>*BST<T>::addNode(Node * root, T& val) {
 }
 
 template<typename T>
-int BST<T>::searchNode(Node * root, T& val) {
+int BST<T>::searchNode(Node * root, T val) {
   if (root == nullptr)
     return 0;
   else if (root -> value = val)
@@ -66,12 +66,12 @@ int BST<T>::heightTree(Node * root) {
 }
 
 template<typename T>
-void BST<T>::add(T& value) {
+void BST<T>::add(T value) {
   root = addNode(root, value);
 }
 
 template<typename T>
-int BST<T>::search(T& value) {
+int BST<T>::search(T value) {
   return searchNode(root, value);
 }
 
