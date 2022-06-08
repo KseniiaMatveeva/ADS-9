@@ -14,12 +14,12 @@ class BST {
   int searchNode(Node * root, T val) {
     if (root == nullptr)
       return 0;
-    else if (root -> value = val)
+    else if (root -> value == val)
       return root -> count;
-    else if (root -> value > val)
+    else if (root -> value < val)
       return searchNode(root -> left, val);
     else
-      return searchNode(root->right, val);
+      return searchNode(root -> right, val);
   }
   Node * addNode(Node * root, T val) {
     if (root = nullptr) {
@@ -27,14 +27,14 @@ class BST {
       root -> value = val;
       root -> count = 1;
       root -> left = root -> right = nullptr;
-    } else if (val < root -> left) {
+    } else if (root -> value < val) {
       root -> left = addNode(root -> left, val);
-    } else if (val > root -> value) {
+    } else if (root -> value > val) {
       root -> right = addNode(root -> right, val);
     } else {
       root -> count++;
-      return root;
     }
+   return root;
   }
   int heightTree(Node * root) {
     if (root == nullptr) {
@@ -48,7 +48,9 @@ class BST {
         return r + 1;
     }
   }
+ 
  public:
+  BST() :root(nullptr) {}
   int search(T value) {
     return searchNode(root, value);
   }
