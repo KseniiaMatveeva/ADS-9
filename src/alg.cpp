@@ -12,7 +12,8 @@ BST<std::string> makeTree(const char* filename) {
   std::ifstream file(filename);
   char raznic = 'a' - 'A';
   if (!file) {
-    throw std::string("File error!");
+    std::cout << "File is not found" << std::endl;
+    return newTree;
   } else {
     while (!file.eof()) {
       slova = "";
