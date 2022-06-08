@@ -23,7 +23,7 @@ class BST {
   }
   Node * addNode(Node * root, T val) {
     if (root = nullptr) {
-      root = newNode;
+      root = new Node;
       root -> value = val;
       root -> count = 1;
       root -> left = root -> right = nullptr;
@@ -33,7 +33,7 @@ class BST {
       root -> right = addNode(root -> right, val);
     } else {
       root -> count++;
-      return n;
+      return root;
     }
   }
   int heightTree(Node * root) {
