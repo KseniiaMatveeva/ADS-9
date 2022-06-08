@@ -14,21 +14,20 @@ BST<std::string> makeTree(const char* filename) {
   if (!file) {
     std::cout << "File is not found" << std::endl;
     return newTree;
-  } else {
-    while (!file.eof()) {
-      slova = "";
-      char sim = file.get();
-      if ((sim >= 'a' && sim <= 'z') || (sim >= 'A' && sim <= 'Z')) {
-        if (sim >= 'A' && sim <= 'Z') {
-          sim = sim + raznic;
-        }
-        slova = slova + sim;
-      } else if (slova != "") {
-        newTree.add(slova);
-        slova = "";
-      }
-    }
-    file.close();
-    return newTree;
   }
+  while (!file.eof()) {
+    slova = "";
+    char sim = file.get();
+    if ((sim >= 'a' && sim <= 'z') || (sim >= 'A' && sim <= 'Z')) {
+      if (sim >= 'A' && sim <= 'Z') {
+        sim = sim + raznic;
+      }
+      slova = slova + sim;
+    } else if (slova != "") {
+      newTree.add(slova);
+      slova = "";
+    }
+  }
+  file.close();
+  return newTree;
 }
