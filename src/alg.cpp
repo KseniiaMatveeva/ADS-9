@@ -11,11 +11,11 @@ BST<std::string> makeTree(const char* filename) {
   BST<std::string> newTree;
   std::string slova = "";
   char raznic = 'a' - 'A';
-  if (!file) {
+  if (!text) {
     std::cout << "File is not found" << std::endl;
     return newTree;
   }
-  while (!file.eof()) {
+  while (!text.eof()) {
     char sim = text.get();
     if (sim >= 'A' && sim <= 'Z') {
       sim = sim + raznic;
