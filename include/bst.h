@@ -43,9 +43,9 @@ class BST {
       int l = heightTree(root -> left);
       int r = heightTree(root -> right);
       if (l > r)
-        return l + 1;
+        return l++;
       else
-        return r + 1;
+        return r++;
     }
   }
 
