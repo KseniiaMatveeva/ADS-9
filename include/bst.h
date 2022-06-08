@@ -3,7 +3,7 @@
 #define INCLUDE_BST_H_
 
 template<typename T>
-class BST {
+class BST<T> {
  private:
   struct Node {
     T value;
