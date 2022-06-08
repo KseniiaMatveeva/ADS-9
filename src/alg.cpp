@@ -26,7 +26,7 @@ BST<std::string> makeTree(const char* filename) {
     } else {
       break;
     }
-    newTree.add(sim);
+    newTree.add(slova);
   }
   file.close();
   return newTree;
