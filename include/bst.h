@@ -41,9 +41,9 @@ class BST {
     if (root != nullptr) {
         l = heightTree(root->left);
         r = heightTree(root->right);
-        h = ((l > r) ? l : r);
+        h = ((l > r) ? l : r) + 1;
     }
-    return h;
+    return h - 1;
   }
 
  public:
