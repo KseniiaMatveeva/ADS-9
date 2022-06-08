@@ -38,10 +38,10 @@ class BST {
   }
   int heightTree(Node * root) {
       int l, r, h = 0;
-    if(root != nullptr){
+    if (root != nullptr) {
         l = heightTree(root->left);
         r = heightTree(root->right);
-        h = ((l > r) ? l : r) + 1;
+        h = ((l > r) ? l : r);
     }
     return h;
   }
