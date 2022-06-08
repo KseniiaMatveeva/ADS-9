@@ -22,7 +22,7 @@ class BST {
       return searchNode(root -> right, val);
   }
   Node * addNode(Node * root, T val) {
-    if (root = nullptr) {
+    if (root == nullptr) {
       root = new Node;
       root -> value = val;
       root -> count = 1;
