@@ -45,6 +45,8 @@ class BST {
       } else {
         return r++;
       }
+    } else {
+     return 0;
     }
   }
 
