@@ -43,7 +43,7 @@ class BST {
         r = heightTree(root->right);
         h = ((l > r) ? l : r) + 1;
     }
-    return h - 1;
+    return h;
   }
 
  public:
