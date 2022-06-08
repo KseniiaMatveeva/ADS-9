@@ -12,9 +12,10 @@ BST<std::string> makeTree(const char* filename) {
   std::ifstream file(filename);
   char raznic = 'a' - 'A';
   if (!file) {
-    throw std::cout << "File error!" << std::endl;
+    throw std::string("File error!");
   } else {
     while (!file.eof()) {
+      slova = "";
       char sim = file.get();
       if ((sim >= 'a' && sim <= 'z') || (sim >= 'A' && sim <= 'Z')) {
         if (sim >= 'A' && sim <= 'Z') {
