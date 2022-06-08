@@ -20,11 +20,11 @@ class BST {
   int depth();
 };
 
-template<typename T> 
+template<typename T>
 BST<T>::BST() {root == nullptr;}
 
 template BST<T>*BST<T>::addNode(Node * root, T val) {
-  if (root = nullptr){
+  if (root = nullptr) {
     root = newNode;
     root -> value = val;
     root -> count = 1;
@@ -53,14 +53,14 @@ int BST<T>::searchNode(Node * root, T val) {
 
 template<typename T>
 int BST<T>::heightTree(Node * root) {
-  if (root == nullptr)
+  if (root == nullptr) {
     return 0;
-  else {
-    int l = heightTree (root -> left);
+  } else {
+    int l = heightTree(root -> left);
     int r = heightTree(root -> right);
     if (l > r)
       return l + 1;
-    else 
+    else
       return r + 1;
   }
 }
@@ -79,5 +79,4 @@ template<typename T>
 int BST<T>::depth() {
   return heightTree(root);
 }
-   
 #endif  // INCLUDE_BST_H_
