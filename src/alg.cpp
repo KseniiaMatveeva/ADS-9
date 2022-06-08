@@ -23,10 +23,10 @@ BST<std::string> makeTree(const char* filename) {
         sim = sim + raznic;
       }
       slova = slova + sim;
-    } else if (slova != "") {
-      newTree.add(slova);
-      slova = "";
+    } else {
+      break;
     }
+    newTree.add(sim);
   }
   file.close();
   return newTree;
