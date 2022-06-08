@@ -44,8 +44,6 @@ class BST {
         return l++;
       else
         return r++;
-    } else {
-     return 0;
     }
   }
 
