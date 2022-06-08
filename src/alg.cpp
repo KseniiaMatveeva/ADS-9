@@ -7,7 +7,7 @@
 
 BST<std::string> makeTree(const char* filename) {
   // поместите сюда свой код
-  std::ifstream file(filename);
+  std::ifstream text(filename);
   BST<std::string> newTree;
   std::string slova = "";
   char raznic = 'a' - 'A';
@@ -16,17 +16,15 @@ BST<std::string> makeTree(const char* filename) {
     return newTree;
   }
   while (!file.eof()) {
-    slova = "";
-    char sim = file.get();
-    if ((sim >= 'a' && sim <= 'z') || (sim >= 'A' && sim <= 'Z')) {
-      if (sim >= 'A' && sim <= 'Z') {
-        sim = sim + raznic;
-      }
+    char sim = text.get();
+    if (sim >= 'A' && sim <= 'Z') {
+      sim = sim + raznic;
+    } else if (('z' >= sim) && ('a' <= sim)) {
       slova = slova + sim;
     } else {
-      break;
+      newTree.add(slova);
+      slova = "";
     }
-    newTree.add(slova);
   }
   file.close();
   return newTree;
