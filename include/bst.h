@@ -34,7 +34,7 @@ class BST {
     } else {
       root -> count++;
     }
-   return root;
+    return root;
   }
   int heightTree(Node * root) {
     if (root == nullptr) {
@@ -48,7 +48,7 @@ class BST {
         return r + 1;
     }
   }
- 
+
  public:
   BST() :root(nullptr) {}
   int search(T value) {
