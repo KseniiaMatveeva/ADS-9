@@ -12,8 +12,7 @@ BST<std::string> makeTree(const char* filename) {
   std::ifstream file(filename);
   char raznic = 'a' - 'A';
   if (!file) {
-    std::cout << "File error!" << std::endl;
-      return;
+    throw std::cout << "File error!" << std::endl;
   } else {
     while (!file.eof()) {
       char sim = file.get();
