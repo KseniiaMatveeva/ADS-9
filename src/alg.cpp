@@ -7,9 +7,9 @@
 
 BST<std::string> makeTree(const char* filename) {
   // поместите сюда свой код
+  std::ifstream file(filename);
   BST<std::string> newTree;
   std::string slova = "";
-  std::ifstream file(filename);
   char raznic = 'a' - 'A';
   if (!file) {
     std::cout << "File is not found" << std::endl;
